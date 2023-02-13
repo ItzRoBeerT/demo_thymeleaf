@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{estatico/css/estilos.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>Esta es la home del proyecto</h1>
+        <h2 th:text="'NOMBRE DEL ARTICULO: '+${articulo}"></h2>
+
+        <h2>--Detalle del Producto--</h2>
+        <h4 th:Text="'Id del producto: '+${producto1.id}"></h4>
+        <h4 th:Text="'nombre del producto: '+${producto1.nombre}"></h4>
+        <h4 th:Text="'descripcion del producto: '+${producto1.descripcion}"></h4>
+        <h4 th:Text="'precio del producto: '+${producto1.precio}+'$'"></h4>
+    </body>
+</html>

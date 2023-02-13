@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <h2>Lista de productos</h2>
+        <ul th:each="producto : ${productos}">
+            <li th:text="${producto}"></li>            
+        </ul>
+
+
+        <table border="1" th:each="producto : ${listaProductos}">
+            <tr>
+                <td>ID</td>
+                <td>NOMBRE DEL PRODUCTO</td>
+                <td>DESCRIPCION</td>
+                <td>PRECIO</td>
+            </tr>
+             <tr>
+                <td th:text="${producto.id}"></td>
+                <td th:text="${producto.nombre}"></td>
+                <td th:text="${producto.descripcion}"></td>
+                <td th:text="${producto.precio}"></td>
+            </tr>
+        </table>
+
+    </body>
+</html>
